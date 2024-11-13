@@ -1,7 +1,7 @@
 <template>
     <div class="success-container">
     <img src="@/assets/changePassword.png" alt="Success" class="success-image" />
-      <h1>¡Contraseña cambiada con éxito!</h1>
+      <h1>¡Contraseña cambiada!</h1>
       <!-- No me gustaron las estrellas, que opinan? -->
       <!-- Adding stars -->
       <!-- <div class="star star-1"></div>

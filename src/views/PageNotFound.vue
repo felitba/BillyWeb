@@ -14,7 +14,7 @@ const goHome = () => {
     <h2>Página no encontrada</h2>
     <p>Lo sentimos, la página que buscas no existe.</p>
     <button @click="goHome" class="home-button">
-      Volver al Inicio de Sesión
+      Volver a HOME
     </button>
   </div>
 </template>
