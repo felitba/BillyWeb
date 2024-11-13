@@ -7,9 +7,14 @@ const routes = [
     component: HomeView,
   },
   {
-    path: '/about',
-    name: 'about',
-    component: () => import('../views/AboutView.vue'),
+    path: '/vmail',
+    name: 'verified-mail',
+    component: () => import('../views/VerifiedMail.vue'),
+  },
+  {
+    path: '/pchanged',
+    name: 'password-changed',
+    component: () => import('../views/PasswordChanged.vue'),
   },
   {
     path: '/:catchAll(.*)',

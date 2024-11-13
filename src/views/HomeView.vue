@@ -1,10 +1,11 @@
 <script setup>
 import Download from '@/components/Download.vue';
+import Header from '@/components/Header.vue';
 </script>
 
 <template>
   <main>
-    <h1>Billy</h1>
+    <Header />
     <p>Billy es un gestor de movimientos, ayudando a gestionar tus tareas de manera eficiente.</p>
     
     <Download platforms="android" />
