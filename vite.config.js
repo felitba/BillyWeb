@@ -15,4 +15,8 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  base: './', // Asegúrate de que la base esté configurada como './' para rutas relativas
+  build: {
+    outDir: 'dist', // Esto indica la carpeta de salida después de ejecutar `npm run build`
+  },
 })
