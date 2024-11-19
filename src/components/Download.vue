@@ -22,7 +22,13 @@ const props = defineProps(['platforms']);
 
 function downloadApp(platform) {
   if (platform === 'android') {
-    window.open('link_to_android_app', '_blank');
+    const link = document.createElement('a');
+    //link.href = '@/Billy.apk';
+    link.href = 'https://drive.google.com/file/d/17cicst3nzhHuxu1dxlY-gmR_ilTT4wH_/view?usp=drive_link';
+    link.download = 'Billy.apk';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   } else if (platform === 'ios') {
     window.open('link_to_ios_app', '_blank');
   }
