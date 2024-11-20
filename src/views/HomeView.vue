@@ -17,8 +17,6 @@ import Download from '@/components/Download.vue';
           <div class="text-container">
             <h2>Gestioná tus gastos de manera <strong class="highlight-text">fácil</strong> y <strong class="highlight-text">eficiente</strong>.</h2>
             <p>¡Olvídate del estrés de las finanzas y deja que Billy lo haga por ti!</p>
-
-            <Download platforms="android" />
           </div>
           <img class="image-container" src="@/assets/billy/billy-signup.png" alt="Beneficios" />
         </section>
@@ -33,10 +31,11 @@ import Download from '@/components/Download.vue';
           <div class="text-container">
             <h2>Billy usa <strong class="highlight-text">inteligencia artificial</strong> para categorizar <strong class="highlight-text">automáticamente</strong></h2>
             <p>Tus movimientos y dividir deudas al instante.</p>
-            <Download platforms="android" />
           </div>
         </section>
       </div>
+      <Download platforms="android" />
+
     </div>
 
   </main>
@@ -96,12 +95,12 @@ import Download from '@/components/Download.vue';
 }
 
 .benefits-section h2 {
-  font-size: 28px;
+  font-size: 36px;
   margin-bottom: 5px;
 }
 
 .benefits-section p {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: normal;
   margin-bottom: 10px;
 }
