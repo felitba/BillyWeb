@@ -70,40 +70,40 @@ import Download from '@/components/Download.vue';
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  margin-top: 40px;
+  margin-top: 20px;
   background-color: #fff;
-  padding: 5px;
-  width: 85%;
+  padding: 10px;
+  width: 70%;
 }
 
 .text-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1;
-  padding-right: 20px;
+  width: 100%;
+  padding: 10px;
 }
 
 .image-container {
   flex: 0 0 auto;
+  max-width: 40%;
 }
 
 .image-container img {
-  width: 30%;
-  height: 30%;
+  width: 25%;
+  height: auto;
   border-radius: 8px;
-  max-width: 30%;
 }
 
 .benefits-section h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
+  font-size: 28px;
+  margin-bottom: 5px;
 }
 
 .benefits-section p {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 10px;
 }
 
 .highlight-text {
