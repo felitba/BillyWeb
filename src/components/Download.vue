@@ -63,7 +63,7 @@ function downloadApp(platform) {
 }
 
 .android:hover {
-  background-color: #008bbf;
+  background-color: rgba(121, 87, 235, 0.5);
 }
 
 .ios {
