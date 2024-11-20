@@ -5,11 +5,13 @@ import Download from '@/components/Download.vue';
 <template>
   <main class="home">
     <div class="outer-container">
+
       <section class="welcome-section">
-    <div class="text-container">
-        <h2>¡Bienvenido/a a Billy!</h2>
-      </div>
-    </section>
+        <div class="text-container">
+          <h2>¡Bienvenido/a a Billy!</h2>
+        </div>
+      </section>
+
       <div class="benefits-container">
         <section class="benefits-section">
           <div class="text-container">
@@ -18,12 +20,8 @@ import Download from '@/components/Download.vue';
 
             <Download platforms="android" />
           </div>
-          <img src="/Users/mactrucho/Downloads/BillyWeb/src/assets/billy/billy-signup.png" alt="Beneficios" />
-
+          <img class="image-container" src="@/assets/billy/billy-signup.png" alt="Beneficios" />
         </section>
-        <!-- <div class="image-container"> -->
-
-          <!-- </div> -->
       </div>
     </div>
 
@@ -32,14 +30,15 @@ import Download from '@/components/Download.vue';
         <section class="benefits-section">
           <img class="image-container" src="@/assets/billy/billy-start.jpg" alt="Beneficios" />
 
-          <!-- <div class="text-container"> -->
-            <h2>Billy usa <strong class="highlight-text"> inteligencia artificial</strong> para categorizar<strong class="highlight-text"> automáticamente </strong></h2>
+          <div class="text-container">
+            <h2>Billy usa <strong class="highlight-text">inteligencia artificial</strong> para categorizar <strong class="highlight-text">automáticamente</strong></h2>
             <p>Tus movimientos y dividir deudas al instante.</p>
             <Download platforms="android" />
-          <!-- </div> -->
+          </div>
         </section>
       </div>
     </div>
+
   </main>
 </template>
 <style scoped>
@@ -62,11 +61,14 @@ import Download from '@/components/Download.vue';
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  align-items: center;
+
 }
 
 .benefits-section {
   display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: 8px;
   margin-top: 40px;
   background-color: #fff;
@@ -75,6 +77,9 @@ import Download from '@/components/Download.vue';
 }
 
 .text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex: 1;
   padding-right: 20px;
 }
@@ -102,7 +107,7 @@ import Download from '@/components/Download.vue';
 }
 
 .highlight-text {
-  font-size: 36px;
+  font-size: 48px;
   font-weight: bold;
   text-align: center;
   color: #7957eb;
@@ -117,7 +122,8 @@ import Download from '@/components/Download.vue';
 }
 
 .benefits-container {
-  margin-bottom: 0px;
-  /* background-color: #7957eb; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
