@@ -4,29 +4,44 @@ import Download from '@/components/Download.vue';
 
 <template>
   <main class="home">
-    <section class="welcome-section">
+    <div class="outer-container">
+      <section class="welcome-section">
     <div class="text-container">
         <h2>¡Bienvenido/a a Billy!</h2>
       </div>
     </section>
-   
-    <div class="outer-container">
       <div class="benefits-container">
         <section class="benefits-section">
           <div class="text-container">
             <h2>Gestioná tus gastos de manera <strong class="highlight-text">fácil</strong> y <strong class="highlight-text">eficiente</strong>.</h2>
-            <p>Ya sea para tus registros personales o en grupo, Billy usa inteligencia artificial para categorizar automáticamente tus movimientos y dividir deudas al instante. ¡Olvídate del estrés de las finanzas y deja que Billy lo haga por ti!</p>
+            <p>¡Olvídate del estrés de las finanzas y deja que Billy lo haga por ti!</p>
+
             <Download platforms="android" />
           </div>
-          <div class="image-container">
-            <img src="/Users/mactrucho/Downloads/BillyWeb/src/assets/billy/billy-start.png" alt="Beneficios" />
-          </div>
+          <img src="/Users/mactrucho/Downloads/BillyWeb/src/assets/billy/billy-signup.png" alt="Beneficios" />
+
+        </section>
+        <!-- <div class="image-container"> -->
+
+          <!-- </div> -->
+      </div>
+    </div>
+
+    <div class="outer-container">
+      <div class="benefits-container">
+        <section class="benefits-section">
+          <img class="image-container" src="@/assets/billy/billy-start.jpg" alt="Beneficios" />
+
+          <!-- <div class="text-container"> -->
+            <h2>Billy usa <strong class="highlight-text"> inteligencia artificial</strong> para categorizar<strong class="highlight-text"> automáticamente </strong></h2>
+            <p>Tus movimientos y dividir deudas al instante.</p>
+            <Download platforms="android" />
+          <!-- </div> -->
         </section>
       </div>
     </div>
   </main>
 </template>
-
 <style scoped>
 .home {
   font-family: 'Arial', sans-serif;
@@ -54,8 +69,9 @@ import Download from '@/components/Download.vue';
   align-items: center;
   border-radius: 8px;
   margin-top: 40px;
-  background-color: #ffffff;
-  padding: 20px;
+  background-color: #fff;
+  padding: 5px;
+  width: 85%;
 }
 
 .text-container {
@@ -64,15 +80,14 @@ import Download from '@/components/Download.vue';
 }
 
 .image-container {
-  flex: 1;
-  width: 100%;
+  flex: 0 0 auto;
 }
 
 .image-container img {
-  width: 60%;
-  height: auto;
+  width: 30%;
+  height: 30%;
   border-radius: 8px;
-  max-width: 100%;
+  max-width: 30%;
 }
 
 .benefits-section h2 {
@@ -102,7 +117,7 @@ import Download from '@/components/Download.vue';
 }
 
 .benefits-container {
-  margin-bottom: 20px;
-  background-color: #7957eb;
+  margin-bottom: 0px;
+  /* background-color: #7957eb; */
 }
 </style>
