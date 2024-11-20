@@ -5,7 +5,6 @@ import Download from '@/components/Download.vue';
 <template>
   <main class="home">
     <div class="outer-container">
-
       <section class="welcome-section">
         <div class="banner">
           <h2>¡Billy: La app de finanzas revolucionaria!</h2>
@@ -16,8 +15,10 @@ import Download from '@/components/Download.vue';
       <div class="benefits-container">
         <section class="benefits-section">
           <div class="text-container">
-            <h2>Gestioná tus gastos de manera <strong class="highlight-text">fácil</strong> y <strong class="highlight-text">eficiente</strong>.</h2>
-            <p> Estadísticas, planificaciones en calendario...¡olvídate del estrés de las finanzas y deja que Billy lo haga por ti!</p>
+            <h2>Gestioná tus gastos de manera <strong class="highlight-text">fácil</strong> y <strong
+                class="highlight-text">eficiente</strong>.</h2>
+            <p>Separación en categorías, estadísticas, calendario...¡olvidate del estrés de las finanzas y dejá que Billy lo
+              haga por vos!</p>
           </div>
           <img class="image-container" src="@/assets/billy/billy-signup.png" alt="Beneficios" />
         </section>
@@ -28,10 +29,10 @@ import Download from '@/components/Download.vue';
       <div class="benefits-container">
         <section class="benefits-section">
           <img class="image-container" src="@/assets/billy/billy-start.jpg" alt="Beneficios" />
-
           <div class="text-container">
-            <h2>Billy usa <strong class="highlight-text">inteligencia artificial</strong> para categorizar <strong class="highlight-text">automáticamente.</strong></h2>
-            <p>¡Tus movimientos y división de deudas al instante de manera individual o grupal...todo es Posible en Billy! </p>
+            <h2>Billy usa <strong class="highlight-text">inteligencia artificial</strong> para categorizar tus
+              gastos <strong class="highlight-text">automáticamente</strong>.</h2>
+            <p>¡Tus movimientos al instante de manera individual o grupal... todo es posible en Billy!</p>
           </div>
         </section>
       </div>
@@ -39,127 +40,134 @@ import Download from '@/components/Download.vue';
 
     <div class="outer-container">
       <div class="benefits-container">
-        <section class="benefits-section2" style="animation: slideIn 0.5s ease-out;">
-          <img class="download-image" src="@/assets/image copy 2.png" />
-          <Download platforms="android" />
+        <section class="benefits-section2">
+          <Download platforms="android" class="centered-button" />
         </section>
       </div>
-    </div> 
- 
-
-    
-
+    </div>
   </main>
 </template>
+
 <style scoped>
 .home {
   font-family: 'Arial', sans-serif;
-  padding: 20px;
   text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
+  overflow-x: hidden;
 }
 
 .outer-container {
-  background-color: rgba(121, 87, 235, 0.3);  /* #f3e5f5 antes estaba asi. */
-  padding: 15px;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  background-color: rgba(121, 87, 235, 0.1);
+  padding: 0rem 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+}
 
+.benefits-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .benefits-section {
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  margin-top: 20px;
+  justify-content: space-between;
   background-color: #fff;
-  padding: 10px;
-  width: 70%;
+  padding: 3rem;
+  width: 80%;
+  max-width: 1200px;
   border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  gap: 3rem;
 }
 
 .benefits-section2 {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  border-radius: 8px;
-  margin-top: 20px;
   background-color: #fff;
-  padding: 10px;
-  width: 70%;
+  padding: 3rem;
+  width: 80%;
+  max-width: 1200px;
   border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
 }
 
 .text-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 10px;
+  flex: 1;
+  text-align: left;
+  padding: 1rem;
 }
 
 .image-container {
-  flex: 0 0 auto;
-  max-width: 40%;
-  transition: transform 0.3s ease;
-  border-radius: 30px;
-}
-
-.image-container img {
-  width: 25%;
+  flex: 1;
+  max-width: 45%;
   height: auto;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
 }
 
 .image-container:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .benefits-section h2 {
-  font-size: 36px;
-  margin-bottom: 5px;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: #333;
 }
 
 .benefits-section p {
-  font-size: 18px;
-  font-weight: normal;
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #666;
 }
 
 .highlight-text {
-  font-size: 36px;
-  font-weight: bold;
-  text-align: center;
   color: #7957eb;
+  font-weight: bold;
 }
 
 .welcome-section {
-    padding: 0px; 
-}
-
-.welcome-section h2 {
-    font-size: 56px;
-}
-
-.benefits-container {
+  width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.banner {
+  background: linear-gradient(135deg, #7957eb 0%, #6246ea 100%);
+  color: white;
+  padding: 3rem;
+  border-radius: 30px;
+  width: 80%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin: 2rem auto;
+}
+
+.banner h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.centered-button {
+  display: block;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -170,40 +178,43 @@ import Download from '@/components/Download.vue';
     transform: translateY(100%);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
   }
 }
 
-.welcome-section, .benefits-section {
+.welcome-section,
+.benefits-section {
   animation: slideIn 0.5s ease-out;
 }
 
-.download-container {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+@media (max-width: 768px) {
+  .benefits-section {
+    flex-direction: column;
+    padding: 2rem;
+    width: 90%;
+  }
 
-.download-image {
-  width: 50%;
-  height: auto;
-}
+  .image-container {
+    max-width: 80%;
+    margin: 1rem 0;
+  }
 
-.banner {
-  background-color: rgba(121, 87, 235, 0.8);  /* #f3e5f5 antes estaba asi. */
-  color: white;
-  padding: 20px;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  width: 90vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  .banner {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    width: 90%;
+  }
+
+  .banner h2 {
+    font-size: 2rem;
+  }
+
+  .benefits-section2 {
+    width: 90%;
+  }
 }
 </style>
