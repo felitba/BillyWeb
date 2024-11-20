@@ -44,8 +44,8 @@ function downloadApp(platform) {
 }
 
 .download-btn {
-  padding: 15px 30px;
-  font-size: 16px;
+  padding: 40px 80px;
+  font-size: 26px;
   border: none;
   border-radius: 8px;
   cursor: pointer;

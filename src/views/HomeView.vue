@@ -8,7 +8,7 @@ import Download from '@/components/Download.vue';
 
       <section class="welcome-section">
         <div class="text-container">
-          <h2>¡Bienvenido/a a Billy!</h2>
+          <h2>¡Billy: La app para revolucionar tus finanzas!</h2>
         </div>
       </section>
 
@@ -29,21 +29,30 @@ import Download from '@/components/Download.vue';
           <img class="image-container" src="@/assets/billy/billy-start.jpg" alt="Beneficios" />
 
           <div class="text-container">
-            <h2>Billy usa <strong class="highlight-text">inteligencia artificial</strong> para categorizar <strong class="highlight-text">automáticamente</strong></h2>
+            <h2>Billy usa <strong class="highlight-text">inteligencia artificial</strong> para categorizar <strong class="highlight-text">automáticamente.</strong></h2>
             <p>Tus movimientos y dividir deudas al instante.</p>
           </div>
         </section>
       </div>
-      <Download platforms="android" />
-
     </div>
+
+    <div class="outer-container">
+      <div class="benefits-container">
+        <section class="benefits-section2" style="animation: slideIn 0.5s ease-out;">
+          <img class="download-image" src="@/assets/image copy 2.png" />
+          <Download platforms="android" />
+        </section>
+      </div>
+    </div> 
+ 
+
+    
 
   </main>
 </template>
 <style scoped>
 .home {
   font-family: 'Arial', sans-serif;
-  color: #333;
   padding: 20px;
   text-align: center;
   max-width: 1200px;
@@ -51,9 +60,8 @@ import Download from '@/components/Download.vue';
 }
 
 .outer-container {
-  background-color: #f3e5f5;
+  background-color: rgba(121, 87, 235, 0.4);  /* #f3e5f5 antes estaba asi. */
   padding: 15px;
-  border-radius: 20px;
   width: 100vw;
   position: relative;
   left: 50%;
@@ -73,6 +81,20 @@ import Download from '@/components/Download.vue';
   background-color: #fff;
   padding: 10px;
   width: 70%;
+  border-radius: 30px;
+}
+
+.benefits-section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 10px;
+  width: 70%;
+  border-radius: 30px;
 }
 
 .text-container {
@@ -87,12 +109,12 @@ import Download from '@/components/Download.vue';
   flex: 0 0 auto;
   max-width: 40%;
   transition: transform 0.3s ease;
+  border-radius: 30px;
 }
 
 .image-container img {
   width: 25%;
   height: auto;
-  border-radius: 8px;
 }
 
 .image-container:hover {
@@ -153,5 +175,18 @@ import Download from '@/components/Download.vue';
 
 .welcome-section, .benefits-section {
   animation: slideIn 0.5s ease-out;
+}
+
+.download-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.download-image {
+  width: 50%;
+  height: auto;
 }
 </style>
