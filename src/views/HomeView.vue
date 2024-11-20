@@ -1,5 +1,17 @@
 <script setup>
 import Download from '@/components/Download.vue';
+import ScreenshotCarousel from '@/components/ScreenshotCarousel.vue';
+import screenshot1 from '@/assets/screenshots/Screenshot1.jpg';
+import screenshot2 from '@/assets/screenshots/Screenshot2.jpg';
+import screenshot3 from '@/assets/screenshots/Screenshot3.jpg';
+import screenshot4 from '@/assets/screenshots/Screenshot4.jpg';
+
+const screenshots = [
+  screenshot1,
+  screenshot2,
+  screenshot3,
+  screenshot4
+];
 </script>
 
 <template>
@@ -17,7 +29,7 @@ import Download from '@/components/Download.vue';
           <div class="text-container">
             <h2>Gestioná tus gastos de manera <strong class="highlight-text">fácil</strong> y <strong
                 class="highlight-text">eficiente</strong>.</h2>
-            <p>Separación en categorías, estadísticas, calendario...¡olvidate del estrés de las finanzas y dejá que Billy lo
+            <p>Estadísticas, planificaciones en calendario...¡olvidate del estrés de las finanzas y dejá que Billy lo
               haga por vos!</p>
           </div>
           <img class="image-container" src="@/assets/billy/billy-signup.png" alt="Beneficios" />
@@ -30,11 +42,17 @@ import Download from '@/components/Download.vue';
         <section class="benefits-section">
           <img class="image-container" src="@/assets/billy/billy-start.jpg" alt="Beneficios" />
           <div class="text-container">
-            <h2>Billy usa <strong class="highlight-text">inteligencia artificial</strong> para categorizar tus
-              gastos <strong class="highlight-text">automáticamente</strong>.</h2>
+            <h2>Billy usa <strong class="highlight-text">inteligencia artificial</strong> para categorizar <strong
+                class="highlight-text">automáticamente</strong>.</h2>
             <p>¡Tus movimientos al instante de manera individual o grupal... todo es posible en Billy!</p>
           </div>
         </section>
+      </div>
+    </div>
+
+    <div class="outer-container">
+      <div class="benefits-container">
+        <ScreenshotCarousel :screenshots="screenshots" />
       </div>
     </div>
 
