@@ -58,7 +58,7 @@ function downloadApp(platform) {
 }
 
 .android {
-  background-color: #7957eb;
+  background-color: rgba(121, 87, 235, 0.9);
   color: white;
 }
 

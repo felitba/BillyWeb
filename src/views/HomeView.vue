@@ -7,8 +7,9 @@ import Download from '@/components/Download.vue';
     <div class="outer-container">
 
       <section class="welcome-section">
-        <div class="text-container">
-          <h2>¡Billy: La app para revolucionar tus finanzas!</h2>
+        <div class="banner">
+          <h2>¡Billy: La app de finanzas revolucionaria!</h2>
+          <Download platforms="android" />
         </div>
       </section>
 
@@ -57,6 +58,8 @@ import Download from '@/components/Download.vue';
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .outer-container {
@@ -140,7 +143,7 @@ import Download from '@/components/Download.vue';
 }
 
 .welcome-section {
-    padding: 2px; 
+    padding: 0px; 
 }
 
 .welcome-section h2 {
@@ -188,5 +191,19 @@ import Download from '@/components/Download.vue';
 .download-image {
   width: 50%;
   height: auto;
+}
+
+.banner {
+  background-color: rgba(121, 87, 235, 0.8);  /* #f3e5f5 antes estaba asi. */
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
