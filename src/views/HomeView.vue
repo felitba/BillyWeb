@@ -52,8 +52,8 @@ import Download from '@/components/Download.vue';
 
 .outer-container {
   background-color: #f3e5f5;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 15px;
+  border-radius: 20px;
   width: 100vw;
   position: relative;
   left: 50%;
@@ -86,6 +86,7 @@ import Download from '@/components/Download.vue';
 .image-container {
   flex: 0 0 auto;
   max-width: 40%;
+  transition: transform 0.3s ease;
 }
 
 .image-container img {
@@ -94,19 +95,23 @@ import Download from '@/components/Download.vue';
   border-radius: 8px;
 }
 
+.image-container:hover {
+  transform: scale(1.05);
+}
+
 .benefits-section h2 {
   font-size: 36px;
   margin-bottom: 5px;
 }
 
 .benefits-section p {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: normal;
   margin-bottom: 10px;
 }
 
 .highlight-text {
-  font-size: 48px;
+  font-size: 36px;
   font-weight: bold;
   text-align: center;
   color: #7957eb;
@@ -124,5 +129,29 @@ import Download from '@/components/Download.vue';
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.welcome-section, .benefits-section {
+  animation: slideIn 0.5s ease-out;
 }
 </style>
