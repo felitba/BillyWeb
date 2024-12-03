@@ -23,9 +23,9 @@ const props = defineProps(['platforms']);
 function downloadApp(platform) {
   if (platform === 'android') {
     const link = document.createElement('a');
-    //link.href = '@/Billy.apk';
-    link.href = 'https://drive.google.com/file/d/17cicst3nzhHuxu1dxlY-gmR_ilTT4wH_/view?usp=drive_link';
+    link.href = '/Billy.apk';
     link.download = 'Billy.apk';
+    link.setAttribute('download', '');
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
