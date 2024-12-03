@@ -17,6 +17,11 @@ const routes = [
     component: () => import('../views/PasswordChanged.vue'),
   },
   {
+    path: '/pshare',
+    name: 'profile-share',
+    component: () => import('../views/ProfileShare.vue'),
+  },
+  {
     path: '/:catchAll(.*)',
     name: 'not-found',
     component: () => import('../views/PageNotFound.vue'),
