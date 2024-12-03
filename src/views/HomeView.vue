@@ -1,6 +1,7 @@
-<script setup>
+  <script setup>
 import Download from '@/components/Download.vue';
 import ScreenshotCarousel from '@/components/ScreenshotCarousel.vue';
+import VisitorCounter from '@/components/VisitorCounter.vue';
 import screenshot1 from '@/assets/screenshots/Screenshot1.jpg';
 import screenshot2 from '@/assets/screenshots/Screenshot2.jpg';
 import screenshot3 from '@/assets/screenshots/Screenshot3.jpg';
@@ -63,6 +64,9 @@ const screenshots = [
         </section>
       </div>
     </div>
+
+    <VisitorCounter />
+
   </main>
 </template>
 
