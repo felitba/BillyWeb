@@ -34,9 +34,6 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="visitor-counter">
-    <p>Visitantes: {{ visitorCount }}</p>
-  </div>
 </template>
 
 <style scoped>
