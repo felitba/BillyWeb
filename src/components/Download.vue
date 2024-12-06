@@ -74,4 +74,11 @@ function downloadApp(platform) {
 .ios:hover {
   background-color: #3c9d2f;
 }
+
+@media (max-width: 768px) {
+  .download-btn {
+    padding: 20px 40px; /* Reduced padding */
+    font-size: 18px; /* Reduced font size */
+  }
+}
 </style>

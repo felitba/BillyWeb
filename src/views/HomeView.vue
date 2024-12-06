@@ -214,29 +214,58 @@ const screenshots = [
 
 @media (max-width: 768px) {
   .benefits-section {
-    flex-direction: column;
-    padding: 2rem;
-    width: 90%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+    margin: 1rem auto;
   }
 
   .image-container {
-    max-width: 80%;
-    margin: 1rem 0;
+    max-width: 45%;
+    height: auto;
+    margin: 0.5rem;
   }
 
   .banner {
     flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
-    width: 90%;
+    gap: 1rem;
+    padding: 1.5rem;
+    width: 100%;
+    margin: 1rem auto;
   }
 
   .banner h2 {
-    font-size: 2rem;
+    font-size: 4vw;
+    text-align: center;
+    margin-bottom: 0.5rem;
   }
 
-  .benefits-section2 {
-    width: 90%;
+  .text-container {
+    text-align: center;
+    padding: 0;
+    margin: 1rem 0;
+  }
+
+  .highlight-text {
+    font-size: 4vw;
+  }
+
+  h2 {
+    font-size: 4vw;
+  }
+
+  p {
+    font-size: 2.5vw;
+  }
+
+  .benefits-section h2,
+  .benefits-section2 h2 {
+    font-size: 3.5vw;
+  }
+
+  .text-container p {
+    font-size: 2.5vw;
   }
 }
 </style>
