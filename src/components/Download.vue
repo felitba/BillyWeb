@@ -77,8 +77,8 @@ function downloadApp(platform) {
 
 @media (max-width: 768px) {
   .download-btn {
-    padding: 20px 40px; /* Reduced padding */
-    font-size: 18px; /* Reduced font size */
+    padding: 20px 40px; 
+    font-size: 18px; 
   }
 }
 </style>

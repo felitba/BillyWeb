@@ -6,6 +6,7 @@ import screenshot1 from '@/assets/screenshots/Screenshot1.jpg';
 import screenshot2 from '@/assets/screenshots/Screenshot2.jpg';
 import screenshot3 from '@/assets/screenshots/Screenshot3.jpg';
 import screenshot4 from '@/assets/screenshots/Screenshot4.jpg';
+import { ref, computed, onMounted } from 'vue';
 
 const screenshots = [
   screenshot1,
@@ -13,6 +14,19 @@ const screenshots = [
   screenshot3,
   screenshot4
 ];
+
+const isMobile = ref(false);
+
+const checkScreenWidth = () => {
+  isMobile.value = window.innerWidth <= 768;
+};
+
+onMounted(() => {
+  checkScreenWidth();
+  window.addEventListener('resize', checkScreenWidth);
+});
+
+const intelligenceText = computed(() => (isMobile.value ? 'IA' : 'inteligencia artificial'));
 </script>
 
 <template>
@@ -43,7 +57,7 @@ const screenshots = [
         <section class="benefits-section">
           <img class="image-container" src="@/assets/billy/billy-start.jpg" alt="Beneficios" />
           <div class="text-container">
-            <h2>Billy usa <strong class="highlight-text">inteligencia artificial</strong> para categorizar <strong
+            <h2>Billy usa <strong class="highlight-text">{{ intelligenceText }}</strong> para categorizar <strong
                 class="highlight-text">automáticamente</strong>.</h2>
             <p>¡Tus movimientos al instante de manera individual o grupal... todo es posible en Billy!</p>
           </div>
@@ -213,18 +227,21 @@ const screenshots = [
 }
 
 @media (max-width: 768px) {
+  .home {
+    overflow-x: auto;
+  }
+
+  .outer-container {
+    overflow-x: auto;
+  }
+
   .benefits-section {
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem;
     width: 100%;
     margin: 1rem auto;
-  }
-
-  .image-container {
-    max-width: 45%;
-    height: auto;
-    margin: 0.5rem;
+    overflow-x: auto;
   }
 
   .banner {
@@ -233,6 +250,7 @@ const screenshots = [
     padding: 1.5rem;
     width: 100%;
     margin: 1rem auto;
+    overflow-x: auto;
   }
 
   .banner h2 {
